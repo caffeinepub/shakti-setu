@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    /* Primary purple #6A3FA0 */
+    --primary: 0.42 0.18 295;
+    --primary-foreground: 1 0 0;
+    /* Orange accent #F28A1A */
+    --accent: 0.72 0.18 55;
+    --accent-foreground: 1 0 0;
+    /* Background lavender #F3F0FA */
+    --background: 0.96 0.02 295;
+    --foreground: 0.15 0 0;
+    /* White card */
+    --card: 1 0 0;
+    --card-foreground: 0.15 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0 0;
+    /* Secondary */
+    --secondary: 0.92 0.04 295;
+    --secondary-foreground: 0.42 0.18 295;
+    /* Muted */
+    --muted: 0.94 0.02 295;
+    --muted-foreground: 0.5 0 0;
+    /* Border */
+    --border: 0.88 0.04 295;
+    --input: 0.88 0.04 295;
+    --ring: 0.42 0.18 295;
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    /* Charts */
+    --chart-1: 0.42 0.18 295;
+    --chart-2: 0.72 0.18 55;
+    --chart-3: 0.6 0.12 295;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    /* Sidebar */
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.15 0 0;
+    --sidebar-primary: 0.42 0.18 295;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.92 0.04 295;
+    --sidebar-accent-foreground: 0.42 0.18 295;
+    --sidebar-border: 0.88 0.04 295;
+    --sidebar-ring: 0.42 0.18 295;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .shakti-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.42 0.18 295) 0%,
+      oklch(0.55 0.16 295) 100%
+    );
+  }
+  .shakti-card-shadow {
+    box-shadow: 0 4px 20px oklch(0.42 0.18 295 / 0.12);
+  }
+  .orange-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.72 0.18 55) 0%,
+      oklch(0.65 0.2 45) 100%
+    );
+  }
+  .mobile-container {
+    max-width: 390px;
+    margin: 0 auto;
+    min-height: 100dvh;
+    position: relative;
+    overflow: hidden;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
